@@ -32,11 +32,12 @@ jobs:
         qbt_cross_name: ["armhf", "armv7", "aarch64", "riscv64", "x86_64", "x86"]
         qbt_libtorrent_version: ["1.2", "2.0"]
         qbt_build_tool: [""]
-        qbt_openssl_tag: ["openssl-3.5.6"]
         qbt_linker_mold: ["yes"]
         include:
           - qbt_build_tool: ""
             qbt_qt_version_name: ""
+          - qbt_libtorrent_version: "1.2"
+            qbt_openssl_tag: ["openssl-3.5.6"]
 
     name: "${{ matrix.qbt_cross_name }}-${{ matrix.qbt_qt_version_name }}libtorrent-v${{ matrix.qbt_libtorrent_version }}"
 
