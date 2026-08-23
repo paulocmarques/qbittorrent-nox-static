@@ -74,7 +74,7 @@ jobs:
           printf '%s\n' "qbt_revision_url=${{ github.repository }}" > env.custom
           printf '%s\n' "qbt_zlib_type=zlib" >> env.custom
           printf '%s\n' "qbt_skip_icu=${set_skip_icu}" >> env.custom
-          printf '%s\n' "qbt_openssl_tag="${{ matrix.qbt_openssl_tag }}" >> env.custom
+          printf '%s\n' "qbt_openssl_tag=${{ matrix.qbt_openssl_tag }}" >> env.custom
           printf '%s\n' "qbt_boost_tag=${{ matrix.qbt_boost_tag }}" >> env.custom
           printf '%s\n' "qbt_libtorrent_version=${{ matrix.qbt_libtorrent_version }}" >> env.custom
           printf '%s\n' "qbt_libtorrent_tag=${{ matrix.qbt_libtorrent_tag }}" >> env.custom
